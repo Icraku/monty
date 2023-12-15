@@ -25,6 +25,7 @@ void addition(stack_t **stack, unsigned int lineNo)
 	if (*stack != NULL && (*stack)->next != NULL)
 	{
 		int sum = (*stack)->n + (*stack)->next->n;
+
 		popTop(stack, 0);
 		(*stack)->n = sum;
 	}

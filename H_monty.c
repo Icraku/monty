@@ -9,6 +9,7 @@
 int combinedFind(char *list, int lN)
 {
 	int ind = 1;
+
 	while (list[ind])
 	{
 		if (list[ind] == '\n' || list[ind] == '\0')
@@ -56,6 +57,7 @@ int strCompare(char *opcode, char *list)
 int pushInt(char *list, int lN)
 {
 	char *opcode = "push";
+
 	while (*list != '\0')
 	{
 		if (*opcode == *list)
@@ -71,7 +73,7 @@ int pushInt(char *list, int lN)
 					else if (*list == '-' || (*list >= '0' && *list <= '9'))
 					{
 						combinedFind(list, lN);
-						return(atoi(list));
+						return (atoi(list));
 					}
 					else
 					{
@@ -94,6 +96,7 @@ int pushInt(char *list, int lN)
 int nL_Index(char *list)
 {
 	char *opcode = "\n";
+
 	while (*list != '\0')
 	{
 		if (*opcode == *list)

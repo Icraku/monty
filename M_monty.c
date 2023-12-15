@@ -29,12 +29,13 @@ void printAll(stack_t **stack, unsigned int lineNo)
 void popTop(stack_t **stack, unsigned int lineNo)
 {
 	stack_t *cur = *stack;
-	if(!(*stack))
+
+	if (!(*stack))
 	{
 		fprintf(stderr, "L%u: empty stack cannot be popped\n", lineNo);
 		exit(EXIT_FAILURE);
 	}
-	
+
 	if (cur != NULL)
 	{
 		*stack = (cur)->next;
@@ -53,6 +54,7 @@ void pushToStack(stack_t **stack, unsigned int lineNo, int n)
 {
 	stack_t *new;
 	stack_t *cur = *stack;
+
 	if (stack == NULL)
 	{
 		fprintf(stderr, "L%d: usage: To push an integer", lineNo);

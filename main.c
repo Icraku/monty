@@ -10,7 +10,7 @@
 void execInstructions(char *tknStr[], stack_t *stack)
 {
 	int ind = 0, lN = 1, n = 0;
-	
+
 	instruction_t instruct[] = {
 		{"pint", printTop},
 		{"add", addition},
@@ -37,7 +37,8 @@ void execInstructions(char *tknStr[], stack_t *stack)
 				}
 				ind++;
 			}
-			if (strCompare(instruct[ind].opcode, "null") && !strCompare(tknStr[n], "\n"))
+			if (strCompare(instruct[ind].opcode, "null") &&
+			!strCompare(tknStr[n], "\n"))
 			{
 				fprintf(stderr, "L%u: instruction %s is unknown", lN, tknStr[n]);
 				if (!nL_Index(tknStr[n]))
